@@ -43,6 +43,6 @@ If you set a cookie "version" to the value 2.0 you will see the response of
 `$app2`. Once the cookie is set the customer will not swap versions untill you
 (re)set the cookie, or when you delete version 1.0 from the CookieVersionSwitch.
 
-This way the consumer is guarentied to have thesame request as long as the
+This way the consumer is guarentied to have the same request as long as the
 cookie is valid.
 
