@@ -1,0 +1,26 @@
+{
+    "name": "reenl/stack-version",
+    "description": "Run multiple versions of the same application.",
+    "keywords": ["stack", "version", "migration"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Reen Lokum",
+            "email": "reen.lokum@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3",
+        "symfony/http-foundation": "~2.1",
+        "symfony/http-kernel": "~2.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "3.7.*"
+    },
+    "suggest": {
+        "reenl/stack-mount": "Allows lazy loading for applications on class collision."
+    },
+    "autoload": {
+        "psr-0": { "Stack\\Version": "src/" }
+    }
+}
