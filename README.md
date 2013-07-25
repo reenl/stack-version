@@ -13,8 +13,6 @@ different application versions.
 
 ```php
 <?php
-// Make sure kernel1.php and kernel2.php return an instance of the HTTP Kernel.
-
 require __DIR__.'/../vendor/autoload.php';
 
 use Symfony\Component\HttpFoundation\Request;
