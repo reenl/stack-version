@@ -18,7 +18,7 @@
         "phpunit/phpunit": "3.7.*"
     },
     "suggest": {
-        "reenl/stack-mount": "Allows lazy loading for applications on class collision."
+        "stack/lazy-http-kernel": "Allows lazy loading for applications on class collision."
     },
     "autoload": {
         "psr-0": { "Stack\\Version": "src/" }
