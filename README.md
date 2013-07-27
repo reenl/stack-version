@@ -1,6 +1,6 @@
 # reenl/stack-version
 
-[reenl/stack-version] (https://github.com/reenl/stack-mount) provides a Symfony HTTP kernel that allows you to switch
+[reenl/stack-version] (https://github.com/reenl/stack-version) provides a Symfony HTTP kernel that allows you to switch
 between versions.
 
 ## Known issues
