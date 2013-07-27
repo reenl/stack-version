@@ -6,7 +6,7 @@ between versions.
 ## Known issues
 
 Because you will probably have the same classes within different application
-versions you might need reenl/stack-mount in order to lazy-load the
+versions you might need [reenl/stack-mount] (https://github.com/reenl/stack-mount) in order to lazy-load the
 different application versions.
 
 ## Example
