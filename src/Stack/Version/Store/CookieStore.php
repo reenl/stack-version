@@ -1,20 +1,31 @@
 <?php
-namespace Stack\Version;
+namespace Stack\Version\Store;
 
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Cookie;
 
-class CookieVersion extends AbstractVersion
+class CookieStore implements StoreInterface
 {
+    /**
+     *
+     * @var string
+     */
     protected $cookieName;
+
+    /**
+     *
+     * @var array
+     */
     protected $cookieParams;
 
-    public function __construct(
-            HttpKernelVersionInterface $app,
-            $cookieName = 'version', $cookieParams = array())
+    /**
+     *
+     * @param string $cookieName
+     * @param array $cookieParams
+     */
+    public function __construct($cookieName = 'version', $cookieParams = array())
     {
-        parent::__construct($app);
         $this->cookieName = $cookieName;
         $this->cookieParams = $cookieParams;
     }
@@ -22,7 +33,7 @@ class CookieVersion extends AbstractVersion
     /**
      * {@inheritdoc}
      */
-    public function extractVersion(Request $request)
+    public function getStoredVersion(Request $request)
     {
         return $request->cookies->get($this->cookieName);
     }
@@ -30,15 +41,7 @@ class CookieVersion extends AbstractVersion
     /**
      * {@inheritdoc}
      */
-    public function createVersionChangedResponse(Request $request, $version)
-    {
-        return null;
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function addVersionToResponse(Request $request, Response $response, $version)
+    public function store(Request $request, Response $response, $version)
     {
         $params = array_merge(
             session_get_cookie_params(),
